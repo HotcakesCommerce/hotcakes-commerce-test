@@ -79,16 +79,16 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             Driver.Navigate().GoToUrl(Globals.BASE_PATH + "/");
             JQueryWait();
             JQueryWait();
-            Driver.FindElement(By.Id("dnn_dnnLogin_enhancedLoginLink")).Click();
+            Driver.FindElement(By.Id("hcc_dnnLogin_enhancedLoginLink")).Click();
             JQueryWait(); // for Azure
             Driver.Navigate()
                 .GoToUrl(Globals.BASE_PATH + "/Home/tabid/55/ctl/Login/language/en-US/Default.aspx?returnurl=/&popUp=true");
             JQueryWait();
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtUsername")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtUsername")).SendKeys(Globals.ADMIN_USERNAME);
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtPassword")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtPassword")).SendKeys(Globals.ADMIN_PASSWORD);
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_cmdLogin")).Click();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtUsername")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtUsername")).SendKeys(Globals.ADMIN_USERNAME);
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtPassword")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtPassword")).SendKeys(Globals.ADMIN_PASSWORD);
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_cmdLogin")).Click();
             JQueryWait();
         }
 
@@ -96,14 +96,14 @@ namespace Hotcakes.AutomatedTesting.TestUtils
         {
             Driver.Navigate().GoToUrl(Globals.BASE_PATH + "/");
             JQueryWait();
-            Driver.FindElement(By.Id("dnn_dnnLogin_enhancedLoginLink")).Click();
+            Driver.FindElement(By.Id("hcc_dnnLogin_enhancedLoginLink")).Click();
             Driver.Navigate()
                 .GoToUrl(Globals.BASE_PATH + "/Home/tabid/55/ctl/Login/language/en-US/Default.aspx?returnurl=/&popUp=true");
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtUsername")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtUsername")).SendKeys("polo");
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtPassword")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtPassword")).SendKeys("Password1");
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_cmdLogin")).Click();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtUsername")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtUsername")).SendKeys("polo");
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtPassword")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtPassword")).SendKeys("Password1");
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_cmdLogin")).Click();
             Driver.FindElement(By.LinkText("Home")).Click();
         }
 
@@ -628,24 +628,24 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             Driver.Navigate().GoToUrl(Globals.BASE_PATH + "/");
             //JQueryWait();
 
-            Driver.FindElement(By.Id("dnn_dnnUser_enhancedRegisterLink")).Click();
+            Driver.FindElement(By.Id("hcc_dnnUser_enhancedRegisterLink")).Click();
             JQueryWait();
             Driver.Navigate()
                 .GoToUrl(Globals.BASE_PATH + "/Home/tabid/55/ctl/register/language/en-US/Default.aspx?returnurl=/&popUp=true");
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_Username_Username_TextBox")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_Username_Username_TextBox")).SendKeys("polo");
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_Password_Password_TextBox")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_Password_Password_TextBox")).SendKeys("Password1");
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_PasswordConfirm_PasswordConfirm_TextBox")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_PasswordConfirm_PasswordConfirm_TextBox"))
+            Driver.FindElement(By.Id("hcc_ctr_Register_userForm_Username_Username_TextBox")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Register_userForm_Username_Username_TextBox")).SendKeys("polo");
+            Driver.FindElement(By.Id("hcc_ctr_Register_userForm_Password_Password_TextBox")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Register_userForm_Password_Password_TextBox")).SendKeys("Password1");
+            Driver.FindElement(By.Id("hcc_ctr_Register_userForm_PasswordConfirm_PasswordConfirm_TextBox")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Register_userForm_PasswordConfirm_PasswordConfirm_TextBox"))
                 .SendKeys("Password1");
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_DisplayName_DisplayName_TextBox")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_DisplayName_DisplayName_TextBox")).SendKeys("polo");
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_Email_Email_TextBox")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_Email_Email_TextBox")).SendKeys("polo@polo.com");
-            Driver.FindElement(By.Id("dnn_ctr_Register_registerButton")).Click();
+            Driver.FindElement(By.Id("hcc_ctr_Register_userForm_DisplayName_DisplayName_TextBox")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Register_userForm_DisplayName_DisplayName_TextBox")).SendKeys("polo");
+            Driver.FindElement(By.Id("hcc_ctr_Register_userForm_Email_Email_TextBox")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Register_userForm_Email_Email_TextBox")).SendKeys("polo@polo.com");
+            Driver.FindElement(By.Id("hcc_ctr_Register_registerButton")).Click();
             JQueryWait();
-            Driver.FindElement(By.Id("dnn_dnnLogin_enhancedLoginLink")).Click();
+            Driver.FindElement(By.Id("hcc_dnnLogin_enhancedLoginLink")).Click();
             JQueryWait();
         }
 
