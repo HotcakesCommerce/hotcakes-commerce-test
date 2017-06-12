@@ -48,7 +48,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="WebDriver.Support">
-      <HintPath>..\..\Selenium\net40\WebDriver.Support.dll</HintPath>
+      <HintPath>..\References\Selenium\net40\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
