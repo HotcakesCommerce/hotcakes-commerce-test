@@ -40,7 +40,6 @@
 .builds
 *.dotCover
 *.ldf
-[Bb]in/*
 
 # git merge artifacts
 *.orig
