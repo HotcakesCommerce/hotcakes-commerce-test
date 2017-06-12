@@ -47,7 +47,7 @@ namespace Hotcakes.AutomatedTesting
         /// 
         ///     http://mytesturl.localhost/
         /// </remarks>
-        public const string BASE_PATH = "http://testhcc300.loc";
+        public const string BASE_PATH = "http://mytesturl.localhost";
 
         /// <summary>
         ///     The superuser username you used when installing the site.
