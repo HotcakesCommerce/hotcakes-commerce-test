@@ -79,16 +79,16 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             Driver.Navigate().GoToUrl(Globals.BASE_PATH + "/");
             JQueryWait();
             JQueryWait();
-            Driver.FindElement(By.Id("dnn_dnnLogin_enhancedLoginLink")).Click();
+            Driver.FindElement(By.Id("hcc_dnnLogin_enhancedLoginLink")).Click();
             JQueryWait(); // for Azure
             Driver.Navigate()
                 .GoToUrl(Globals.BASE_PATH + "/Home/tabid/55/ctl/Login/language/en-US/Default.aspx?returnurl=/&popUp=true");
             JQueryWait();
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtUsername")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtUsername")).SendKeys(Globals.ADMIN_USERNAME);
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtPassword")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtPassword")).SendKeys(Globals.ADMIN_PASSWORD);
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_cmdLogin")).Click();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtUsername")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtUsername")).SendKeys(Globals.ADMIN_USERNAME);
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtPassword")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtPassword")).SendKeys(Globals.ADMIN_PASSWORD);
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_cmdLogin")).Click();
             JQueryWait();
         }
 
@@ -96,14 +96,14 @@ namespace Hotcakes.AutomatedTesting.TestUtils
         {
             Driver.Navigate().GoToUrl(Globals.BASE_PATH + "/");
             JQueryWait();
-            Driver.FindElement(By.Id("dnn_dnnLogin_enhancedLoginLink")).Click();
+            Driver.FindElement(By.Id("hcc_dnnLogin_enhancedLoginLink")).Click();
             Driver.Navigate()
                 .GoToUrl(Globals.BASE_PATH + "/Home/tabid/55/ctl/Login/language/en-US/Default.aspx?returnurl=/&popUp=true");
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtUsername")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtUsername")).SendKeys("polo");
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtPassword")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_txtPassword")).SendKeys("Password1");
-            Driver.FindElement(By.Id("dnn_ctr_Login_Login_DNN_cmdLogin")).Click();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtUsername")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtUsername")).SendKeys("polo");
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtPassword")).Clear();
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_txtPassword")).SendKeys("Password1");
+            Driver.FindElement(By.Id("hcc_ctr_Login_Login_DNN_cmdLogin")).Click();
             Driver.FindElement(By.LinkText("Home")).Click();
         }
 
@@ -147,11 +147,11 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             new SelectElement(Driver.FindElement(By.Id("MainContent_ucAddressEditor_lstCountry"))).SelectByText(
                 "United States");
             Driver.FindElement(By.Id("MainContent_ucAddressEditor_firstNameField")).Clear();
-            Driver.FindElement(By.Id("MainContent_ucAddressEditor_firstNameField")).SendKeys("Ryan");
+            Driver.FindElement(By.Id("MainContent_ucAddressEditor_firstNameField")).SendKeys("Jon");
             Driver.FindElement(By.Id("MainContent_ucAddressEditor_lastNameField")).Clear();
-            Driver.FindElement(By.Id("MainContent_ucAddressEditor_lastNameField")).SendKeys("Morgan");
+            Driver.FindElement(By.Id("MainContent_ucAddressEditor_lastNameField")).SendKeys("Snow");
             Driver.FindElement(By.Id("MainContent_ucAddressEditor_CompanyField")).Clear();
-            Driver.FindElement(By.Id("MainContent_ucAddressEditor_CompanyField")).SendKeys("Arrow Digital");
+            Driver.FindElement(By.Id("MainContent_ucAddressEditor_CompanyField")).SendKeys("House of Stark");
             Driver.FindElement(By.Id("MainContent_ucAddressEditor_address1Field")).Clear();
             Driver.FindElement(By.Id("MainContent_ucAddressEditor_address1Field")).SendKeys(Globals.STORE_ADDRESS_STREET1);
             Driver.FindElement(By.Id("MainContent_ucAddressEditor_cityField")).Clear();
@@ -177,10 +177,10 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             JQueryWait(); // for Azure
             Driver.Navigate().GoToUrl(Globals.BASE_PATH + "/DesktopModules/Hotcakes/Core/Admin/configuration/Email.aspx");
             Driver.FindElement(By.Id("MainContent_ContactEmailField")).Clear();
-            Driver.FindElement(By.Id("MainContent_ContactEmailField")).SendKeys("Send_General_Email_To@change.me");
+            Driver.FindElement(By.Id("MainContent_ContactEmailField")).SendKeys("Send_General_Email_To@example.com");
             Driver.FindElement(By.Id("MainContent_OrderNotificationEmailField")).Clear();
             Driver.FindElement(By.Id("MainContent_OrderNotificationEmailField"))
-                .SendKeys("Send_New_Order_Emails_To@change.me");
+                .SendKeys("Send_New_Order_Emails_To@example.com");
             Driver.FindElement(By.Id("MainContent_btnSave")).Click();
 
             // Payment Methods
@@ -478,21 +478,21 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             //JQueryWait();
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).SendKeys(Variable1 + " manufacturer1");
             Driver.FindElement(By.Id("MainContent_EmailField")).Clear();
-            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("manufacturer1@manufacturer1.com");
+            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("manufacturer1@example.com");
             Driver.FindElement(By.Id("MainContent_btnSaveChanges")).Click();
             Thread.Sleep(1000);
             Driver.FindElement(By.Id("NavContent_btnNew")).Click();
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).Clear();
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).SendKeys(Variable2 + " manufacturer2");
             Driver.FindElement(By.Id("MainContent_EmailField")).Clear();
-            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("manufacturer2@manufacturer2.com");
+            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("manufacturer2@example.com");
             Driver.FindElement(By.Id("MainContent_btnSaveChanges")).Click();
             Thread.Sleep(1000);
             Driver.FindElement(By.Id("NavContent_btnNew")).Click();
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).Clear();
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).SendKeys(Variable3 + " manufacturer3");
             Driver.FindElement(By.Id("MainContent_EmailField")).Clear();
-            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("manufacturer3@manufacturer3.com");
+            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("manufacturer3@example.com");
             Driver.FindElement(By.Id("MainContent_btnSaveChanges")).Click();
         }
 
@@ -506,7 +506,7 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).Clear();
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).SendKeys(Variable1 + " vendor1");
             Driver.FindElement(By.Id("MainContent_EmailField")).Clear();
-            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("vendor1@vendor1com");
+            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("vendor1@example.com");
             Thread.Sleep(3000);
             Driver.FindElement(By.Id("MainContent_btnSaveChanges")).Click();
             Thread.Sleep(3000);
@@ -515,7 +515,7 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).Clear();
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).SendKeys(Variable2 + " vendor2");
             Driver.FindElement(By.Id("MainContent_EmailField")).Clear();
-            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("vendor2@vendor2.com");
+            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("vendor2@example.com");
             Thread.Sleep(3000);
             Driver.FindElement(By.Id("MainContent_btnSaveChanges")).Click();
             Thread.Sleep(3000);
@@ -524,7 +524,7 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).Clear();
             Driver.FindElement(By.Id("MainContent_DisplayNameField")).SendKeys(Variable3 + " vendor3");
             Driver.FindElement(By.Id("MainContent_EmailField")).Clear();
-            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("vendor3@vendor.3com");
+            Driver.FindElement(By.Id("MainContent_EmailField")).SendKeys("vendor3@example.com");
             Thread.Sleep(3000);
             Driver.FindElement(By.Id("MainContent_btnSaveChanges")).Click();
         }
@@ -642,7 +642,7 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             Driver.FindElement(By.Id("dnn_ctr_Register_userForm_DisplayName_DisplayName_TextBox")).Clear();
             Driver.FindElement(By.Id("dnn_ctr_Register_userForm_DisplayName_DisplayName_TextBox")).SendKeys("polo");
             Driver.FindElement(By.Id("dnn_ctr_Register_userForm_Email_Email_TextBox")).Clear();
-            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_Email_Email_TextBox")).SendKeys("polo@polo.com");
+            Driver.FindElement(By.Id("dnn_ctr_Register_userForm_Email_Email_TextBox")).SendKeys("polo@example.com");
             Driver.FindElement(By.Id("dnn_ctr_Register_registerButton")).Click();
             JQueryWait();
             Driver.FindElement(By.Id("dnn_dnnLogin_enhancedLoginLink")).Click();
@@ -659,7 +659,7 @@ namespace Hotcakes.AutomatedTesting.TestUtils
             Driver.FindElement(By.Id("qty")).SendKeys("3");
             JQueryWait();
             new SelectElement(Driver.FindElement(By.Id("giftcardpredefined"))).SelectByText("500,00 €");
-            Driver.FindElement(By.Id("GiftCardRecEmail")).SendKeys("Recipient@email.com");
+            Driver.FindElement(By.Id("GiftCardRecEmail")).SendKeys("Recipient@example.com");
             Driver.FindElement(By.Id("giftcardrecname")).SendKeys("Recipient Name");
             Driver.FindElement(By.Id("giftcardmessage")).SendKeys("Message for Recipient");
             Driver.FindElement(By.Id("addtocartbutton")).Click(); //Add to Cart
