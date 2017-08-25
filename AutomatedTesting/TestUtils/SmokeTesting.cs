@@ -27,6 +27,7 @@ using System;
 using System.IO;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 
@@ -42,16 +43,21 @@ namespace Hotcakes.AutomatedTesting.TestUtils
 
             var profile = new FirefoxProfile(@"C:\Work\Hotcakes\QA\AutomatedTesting 3.XX.XX\Selenium\Firefoxprofile");
 
-            var chromeOptions = new ChromeOptions();
+            var service = ChromeDriverService.CreateDefaultService();
+            service.Port = 12942;
+
+            var chromeOptions = new ChromeOptions
+            {
+                Proxy = new Proxy { Kind = ProxyKind.Direct }
+            };
             chromeOptions.AddArgument("no-sandbox");
 
-            Driver = new ChromeDriver(chromeOptions);
+            Driver = new ChromeDriver(service, chromeOptions, Globals.TIMEOUT);
             VerificationErrors = new StringBuilder();
-
-            var ts = TimeSpan.FromSeconds(120);
-            Driver.Manage().Timeouts().ImplicitlyWait(ts);
-            Driver.Manage().Timeouts().SetPageLoadTimeout(ts);
-            Driver.Manage().Timeouts().SetScriptTimeout(ts);
+            
+            Driver.Manage().Timeouts().ImplicitlyWait(Globals.TIMEOUT);
+            Driver.Manage().Timeouts().SetPageLoadTimeout(Globals.TIMEOUT);
+            Driver.Manage().Timeouts().SetScriptTimeout(Globals.TIMEOUT);
         }
 
         [TestMethod]
