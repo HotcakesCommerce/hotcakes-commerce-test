@@ -50,7 +50,7 @@ namespace Hotcakes.AutomatedTesting.TestUtils
 
         public void WaitForReady()
         {
-            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(30));
+            var wait = new WebDriverWait(Driver, Globals.TIMEOUT);
             wait.Until(driver =>
             {
                 var isAjaxFinished = (bool)((IJavaScriptExecutor)driver).
